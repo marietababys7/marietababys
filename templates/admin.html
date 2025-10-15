@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Panel de Administración</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <p>{{ form.name.label }} {{ form.name() }}</p>
+    <p>{{ form.description.label }} {{ form.description() }}</p>
+    <p>{{ form.price.label }} {{ form.price() }}</p>
+    <p>{{ form.image.label }} {{ form.image() }}</p>
+    <p>{{ form.submit() }}</p>
+</form>
+<a href="{{ url_for('logout') }}">Cerrar sesión</a>
+{% endblock %}

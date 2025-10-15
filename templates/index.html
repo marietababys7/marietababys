@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Bienvenidos a MarietaBabys 🦋</h1>
+<div class="products">
+    {% for product in products %}
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='images/' + product.image) }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Precio: ${{ product.price }}</p>
+        <form action="{{ url_for('buy', product_id=product.id) }}" method="POST">
+            <button type="submit">Comprar</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
