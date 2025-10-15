@@ -1,75 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff0f5;
-    color: #000;
-    margin: 0;
-}
-
-header {
-    background-color: #ff69b4;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .logo img {
-    height: 60px;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    text-align: center;
-    color: #ff1493;
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product-card {
     background-color: #fff;
-    border: 2px solid #ff69b4;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 15px;
-    width: 200px;
-    text-align: center;
+    color: #000;
+    font-family: Arial, sans-serif;
 }
 
-.product-card img {
-    max-width: 100%;
-    border-radius: 10px;
+header nav ul li a {
+    color: #ff69b4; /* rosado */
+    text-decoration: none;
+    margin-right: 20px;
 }
 
-button {
-    background-color: #ff69b4;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
+header nav ul li a:hover {
+    color: #000;
 }
 
-button:hover {
-    background-color: #ff1493;
-}
-
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+body::before {
+    content: "🦋";
+    font-size: 2em;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
